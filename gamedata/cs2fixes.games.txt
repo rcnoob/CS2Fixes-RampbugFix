@@ -274,8 +274,8 @@
 			}
 			"PassesTriggerFilters"
 			{
-				"windows"		"269"
-				"linux"			"270"
+				"windows"		"271"
+				"linux"			"272"
 			}
 			"CCSPlayerController_Respawn"
 			{
