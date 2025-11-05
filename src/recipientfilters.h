@@ -70,10 +70,17 @@ public:
 		return std::popcount(bits);
 	}
 
+	virtual CPlayerSlot GetExcludedPlayerDueToPrediction() const
+	{
+		return m_slotPlayerExcludedDueToPrediction;
+	}
+
 protected:
-	NetChannelBufType_t m_nBufType;
-	bool m_bInitMessage;
 	CPlayerBitVec m_Recipients;
+	CPlayerSlot m_slotPlayerExcludedDueToPrediction = -1;
+	NetChannelBufType_t m_nBufType = BUF_DEFAULT;
+	bool m_bInitMessage;
+	bool m_bDoNotSuppressPrediction; // unused
 };
 
 // Simple filter for when only 1 recipient is needed
